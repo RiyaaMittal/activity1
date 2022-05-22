@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            height: 310px;
+            width: 310px;
+            border: 1px solid transparent;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -6vh;
+            border: 6px solid #6b00b3;
+            border-radius: 15px;
+            background-color: #6b00b3;
+        }
+        #one{
+            height: 100px;
+            width: 100px;
+            border-right: 5px solid #6b00b3;
+            border-bottom: 5px solid #6b00b3;
+            background-color: #001a4d;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        #one:hover{
+            background-color: #002266;
+        }
+        #two{
+            height: 100px;
+            width: 100px;
+            border-right: 5px solid #6b00b3;
+            border-bottom: 5px solid #6b00b3;
+            background-color: #001a4d;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        #two:hover{
+            background-color: #002266;
+        }
+        #three{
+            height: 100px;
+            width: 100px;
+            border-bottom: 5px solid #6b00b3;
+            background-color: #001a4d;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        #three:hover{
+            background-color: #002266;
+        }
+        #four{
+            height: 100px;
+            width: 100px;
+            border-right: 5px solid #6b00b3;
+            border-bottom: 5px solid #6b00b3;
+            background-color: #001a4d;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        #four:hover{
+            background-color: #002266;
+        }
+        #five{
+            height: 100px;
+            width: 100px;
+            border-right: 5px solid #6b00b3;
+            border-bottom: 5px solid #6b00b3;
+            background-color: #001a4d;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        #five:hover{
+            background-color: #002266;
+        }
+        #six{
+            height: 100px;
+            width: 100px;
+            border-bottom: 5px solid #6b00b3;
+            background-color: #001a4d;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        #six:hover{
+            background-color: #002266;
+        }
+        #seven{
+            height: 100px;
+            width: 100px;
+            border-right: 5px solid #6b00b3;
+            background-color: #001a4d;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        #seven:hover{
+            background-color: #002266;
+        }
+        #eight{
+            height: 100px;
+            width: 100px;
+            border-right: 5px solid #6b00b3;
+            background-color: #001a4d;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        #eight:hover{
+            background-color: #002266;
+        }
+        #nine{
+            height: 100px;
+            width: 100px;
+            background-color: #001a4d;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        #nine:hover{
+            background-color: #002266;
+        }
+        button{
+            height: 50px;
+            width: 50px;
+            margin: 20px;
+        }
+        #cross{
+            height: 50px;
+            width: 50px;
+        }
+        #cross img{
+            height: 40px;
+            width: 40px;
+            margin-left: -2px;
+        }
+        #zero img{
+            height: 40px;
+            width: 40px;
+            margin-left: -2px;
+        }
+        #image1{
+            height: 70px;
+            width: 70px;
+            background-size: contain;
+        }
+        .appear{
+            text-align: center;
+            font-size: 60px;
+            font-weight: 500;
+        }
+        #result{
+            text-align: center;
+            font-size: 80px;
+            z-index: 1;
+            color: chocolate;
+        }
+        @keyframes anima{
+            0%{
+                font-size:50px;
+                opacity: 0;
+            }
+            100%{
+                font-size:80px;
+                opacity: 1;
+            }
+        }
+        #buttons{
+            margin-left: 42%;
+            margin-top: 1%;
+        }
+        #zero{
+            margin-left: 7%;
+        }
+        hr{
+            height: 3px;
+            width: 270px;
+            background-color: purple;
+            border: purple;
+            z-index: 10;
+            visibility: hidden;
+            margin-top: 10vh;
+        }
+        .win{
+            display: inline-block;
+            margin-left: 43%;
+        }
+        #image{
+            background: transparent;
+        }
+        /*
+        #image{
+            height: 150px;
+            width: 150px;
+            margin-left: 45%;
+            border: transparent;
+        }*/
+    </style>
+</head>
+<body style="background-image: url(https://media.istockphoto.com/photos/decoration-twinkle-glitters-background-abstract-shiny-backdrop-with-picture-id1313832936?b=1&k=20&m=1313832936&s=170667a&w=0&h=0PcSvVrwaz2-Dlwbastise9n-FoHs3fWNzER2QDLSLI=); background-repeat: no-repeat; background-size: cover;">
+    <div id="container">
+        <hr id="line">
+        <div id="main">
+            <div id="one" onclick="get1();" class="appear"></div>
+            <div id="two" onclick="get2();" class="appear"></div>
+            <div id="three" onclick="get3();" class="appear"></div>
+            <div id="four" onclick="get4();" class="appear"></div>
+            <div id="five" onclick="get5();" class="appear"></div>
+            <div id="six" onclick="get6();" class="appear"></div>
+            <div id="seven" onclick="get7();" class="appear"></div>
+            <div id="eight" onclick="get8();" class="appear"></div>
+            <div id="nine" onclick="get9();" class="appear"></div>
+        </div>
+        <div id="buttons">
+            <button id="cross" onclick="crosses();"> <img src="https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png"> </button>
+            <button id="zero" onclick="zeroes();"><img src="https://cdn2.iconfinder.com/data/icons/royal-crowns/512/royal-alphabet-crown-letter-english-o-512.png"></button>
+        </div>
+    </div>
+    <div class="win">
+        <div id="result"></div>
+        <img id="image">
+    </div>
+
+
+    <script>
+        var image=document.getElementById("image");
+        var music=new Audio("tapsound.wav");
+        var music2=new Audio("secondsound.wav");
+        var line=document.getElementById("line");
+        var main=document.getElementById("main");
+
+        var whole=document.getElementById("main");
+
+        var a=document.getElementById('one');
+        var b=document.getElementById('two');
+        var c=document.getElementById('three');
+        var d=document.getElementById('four');
+        var e=document.getElementById('five');
+        var f=document.getElementById('six');
+        var g=document.getElementById('seven');
+        var h=document.getElementById('eight');
+        var i=document.getElementById('nine');
+
+        var A=document.getElementById('text1');
+
+        var x=document.getElementById('result');
+
+        /*
+        var A=a.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+        var B=b.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+        var C=c.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+        var D=d.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+        var E=e.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+        var F=f.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+        var G=g.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+        var H=h.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+        var I=i.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+        */
+
+        var j=document.getElementById('cross');
+        var k=document.getElementById('zero');
+
+        function crosses(){
+            console.log("cross is clicked");
+            a.onclick=function(){
+                a.innerHTML="X";
+                a.style.color="red";
+                a.style.fontWeight="800";
+                //A.setAttribute=("src","https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png");
+                //a.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+                //a.style.backgroundSize="contain";
+                //a.innerHTML="cross";
+                console.log("first box is clicked");
+                music.play();
+                if((a.innerHTML=="X") && (b.innerHTML=="X") && (c.innerHTML=="X")){
+                    //window.write("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="10vh";
+                    main.style.marginTop="-6vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((a.innerHTML=="X") && (d.innerHTML=="X") && (g.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="35.5%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((a.innerHTML=="X") && (e.innerHTML=="X") && (i.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(45deg)";
+                    line.style.marginTop="26vh";
+                    main.style.marginTop="-22vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            b.onclick=function(){
+                b.innerHTML="X";
+                b.style.color="red";
+                b.style.fontWeight="800";
+                //b.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+                //b.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                if((a.innerHTML=="X") && (b.innerHTML=="X") && (c.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="10vh";
+                    main.style.marginTop="-6vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                
+                else if((b.innerHTML=="X") && (e.innerHTML=="X") && (h.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="42.5%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                
+            }
+            c.onclick=function(){
+                c.innerHTML="X";
+                c.style.color="red";
+                c.style.fontWeight="800";
+                //c.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+                //c.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                if((a.innerHTML=="X") && (b.innerHTML=="X") && (c.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="10vh";
+                    main.style.marginTop="-6vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                
+                else if((c.innerHTML=="X") && (f.innerHTML=="X") && (i.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="49%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((c.innerHTML=="X") && (e.innerHTML=="X") && (g.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(-45deg)";
+                    line.style.marginTop="26vh";
+                    main.style.marginTop="-22vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                
+            }
+            d.onclick=function(){
+                d.innerHTML="X";
+                d.style.color="red";
+                d.style.fontWeight="800";
+               // d.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+               // d.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                
+                if((a.innerHTML=="X") && (d.innerHTML=="X") && (g.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="35.5%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+
+                }
+                else if((d.innerHTML=="X") && (e.innerHTML=="X") && (f.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="23vh";
+                    main.style.marginTop="-19vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            e.onclick=function(){
+                e.innerHTML="X";
+                e.style.color="red";
+                e.style.fontWeight="800";
+                //e.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+                //e.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                
+                if((a.innerHTML=="X") && (e.innerHTML=="X") && (i.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(45deg)";
+                    line.style.marginTop="26vh";
+                    main.style.marginTop="-22vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((d.innerHTML=="X") && (e.innerHTML=="X") && (f.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="23vh";
+                    main.style.marginTop="-19vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((b.innerHTML=="X") && (e.innerHTML=="X") && (h.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="42.5%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((c.innerHTML=="X") && (e.innerHTML=="X") && (g.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(-45deg)";
+                    line.style.marginTop="26vh";
+                    main.style.marginTop="-22vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            f.onclick=function(){
+                f.innerHTML="X";
+                f.style.color="red";
+                f.style.fontWeight="800";
+                //f.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+                //f.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                
+                if((d.innerHTML=="X") && (e.innerHTML=="X") && (f.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="23vh";
+                    main.style.marginTop="-19vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((c.innerHTML=="X") && (f.innerHTML=="X") && (i.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="49%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            g.onclick=function(){
+                g.innerHTML="X";
+                g.style.color="red";
+                g.style.fontWeight="800";
+                //g.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+                //g.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                
+                if((a.innerHTML=="X") && (d.innerHTML=="X") && (g.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="35.5%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((g.innerHTML=="X") && (h.innerHTML=="X") && (i.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="37vh";
+                    main.style.marginTop="-33vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((c.innerHTML=="X") && (e.innerHTML=="X") && (g.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(-45deg)";
+                    line.style.marginTop="26vh";
+                    main.style.marginTop="-22vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            h.onclick=function(){
+                h.innerHTML="X";
+                h.style.color="red";
+                h.style.fontWeight="800";
+               // h.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+               // h.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+            
+                if((g.innerHTML=="X") && (h.innerHTML=="X") && (i.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="37vh";
+                    main.style.marginTop="-33vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((b.innerHTML=="X") && (e.innerHTML=="X") && (h.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="42.5%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            i.onclick=function(){
+                i.innerHTML="X";
+                i.style.color="red";
+                i.style.fontWeight="800";
+                //i.style.backgroundImage="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')";
+                //i.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                if((a.innerHTML=="X") && (e.innerHTML=="X") && (i.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(45deg)";
+                    line.style.marginTop="26vh";
+                    main.style.marginTop="-22vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((g.innerHTML=="X") && (h.innerHTML=="X") && (i.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="37vh";
+                    main.style.marginTop="-33vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((c.innerHTML=="X") && (f.innerHTML=="X") && (i.innerHTML=="X")){
+                    console.log("X won");
+                    x.innerHTML='X won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="49%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            //function get1(){
+            //    a.innerHTML="hello";
+            //}
+            /*
+            if((a.innerHTML=="X") && (b.innerHTML=="X") && (c.innerHTML=="X")){
+            console.log("X won");
+            x.innerHTML='X won';
+            }
+            */
+        }
+
+
+        function zeroes(){
+            //console.log("zero is clicked");
+            a.onclick=function(){
+                a.innerHTML="O";
+                a.style.color="yellow";
+                a.style.fontWeight="800";
+                //a.style.backgroundImage="url('https://cdn2.iconfinder.com/data/icons/royal-crowns/512/royal-alphabet-crown-letter-english-o-512.png')";
+                //a.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                if((a.innerHTML=="O") && (b.innerHTML=="O") && (c.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="10vh";
+                    main.style.marginTop="-6vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((a.innerHTML=="O") && (d.innerHTML=="O") && (g.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="35.5%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((a.innerHTML=="O") && (e.innerHTML=="O") && (i.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(45deg)";
+                    line.style.marginTop="26vh";
+                    main.style.marginTop="-22vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            b.onclick=function(){
+                b.innerHTML="O";
+                b.style.color="yellow";
+                b.style.fontWeight="800";
+                //b.style.backgroundImage="url('https://cdn2.iconfinder.com/data/icons/royal-crowns/512/royal-alphabet-crown-letter-english-o-512.png')";
+                //b.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                if((a.innerHTML=="O") && (b.innerHTML=="O") && (c.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="10vh";
+                    main.style.marginTop="-6vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                
+                else if((b.innerHTML=="O") && (e.innerHTML=="O") && (h.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="42.5%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            c.onclick=function(){
+                c.innerHTML="O";
+                c.style.color="yellow";
+                c.style.fontWeight="800";
+                //c.style.backgroundImage="url('https://cdn2.iconfinder.com/data/icons/royal-crowns/512/royal-alphabet-crown-letter-english-o-512.png')";
+                //c.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                if((a.innerHTML=="O") && (b.innerHTML=="O") && (c.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="10vh";
+                    main.style.marginTop="-6vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                
+                else if((c.innerHTML=="O") && (f.innerHTML=="O") && (i.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="49%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((c.innerHTML=="O") && (e.innerHTML=="O") && (g.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(-45deg)";
+                    line.style.marginTop="26vh";
+                    main.style.marginTop="-22vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            d.onclick=function(){
+                d.innerHTML="O";
+                d.style.color="yellow";
+                d.style.fontWeight="800";
+               // d.style.backgroundImage="url('https://cdn2.iconfinder.com/data/icons/royal-crowns/512/royal-alphabet-crown-letter-english-o-512.png')";
+                //d.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                if((a.innerHTML=="O") && (d.innerHTML=="O") && (g.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="35.5%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((d.innerHTML=="O") && (e.innerHTML=="O") && (f.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="23vh";
+                    main.style.marginTop="-19vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            e.onclick=function(){
+                e.innerHTML="O";
+                e.style.color="yellow";
+                e.style.fontWeight="800";
+                //e.style.backgroundImage="url('https://cdn2.iconfinder.com/data/icons/royal-crowns/512/royal-alphabet-crown-letter-english-o-512.png')";
+               // e.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                if((a.innerHTML=="O") && (e.innerHTML=="O") && (i.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(45deg)";
+                    line.style.marginTop="26vh";
+                    main.style.marginTop="-22vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((d.innerHTML=="O") && (e.innerHTML=="O") && (f.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="23vh";
+                    main.style.marginTop="-19vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((b.innerHTML=="O") && (e.innerHTML=="O") && (h.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="42.5%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((c.innerHTML=="O") && (e.innerHTML=="O") && (g.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(-45deg)";
+                    line.style.marginTop="26vh";
+                    main.style.marginTop="-22vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            f.onclick=function(){
+                f.innerHTML="O";
+                f.style.color="yellow";
+                f.style.fontWeight="800";
+               // f.style.backgroundImage="url('https://cdn2.iconfinder.com/data/icons/royal-crowns/512/royal-alphabet-crown-letter-english-o-512.png')";
+               // f.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                if((d.innerHTML=="O") && (e.innerHTML=="O") && (f.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="23vh";
+                    main.style.marginTop="-19vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((c.innerHTML=="O") && (f.innerHTML=="O") && (i.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="49%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            g.onclick=function(){
+                g.innerHTML="O";
+                g.style.color="yellow";
+                g.style.fontWeight="800";
+                //g.style.backgroundImage="url('https://cdn2.iconfinder.com/data/icons/royal-crowns/512/royal-alphabet-crown-letter-english-o-512.png')";
+                //g.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                if((a.innerHTML=="O") && (d.innerHTML=="O") && (g.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="35.5%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((g.innerHTML=="O") && (h.innerHTML=="O") && (i.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="37vh";
+                    main.style.marginTop="-33vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((c.innerHTML=="O") && (e.innerHTML=="O") && (g.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(-45deg)";
+                    line.style.marginTop="26vh";
+                    main.style.marginTop="-22vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            h.onclick=function(){
+                h.innerHTML="O";
+                h.style.color="yellow";
+                h.style.fontWeight="800";
+               // h.style.backgroundImage="url('https://cdn2.iconfinder.com/data/icons/royal-crowns/512/royal-alphabet-crown-letter-english-o-512.png')";
+                //h.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                if((g.innerHTML=="O") && (h.innerHTML=="O") && (i.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="37vh";
+                    main.style.marginTop="-33vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((b.innerHTML=="O") && (e.innerHTML=="O") && (h.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="42.5%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+            i.onclick=function(){
+                i.innerHTML="O";
+                i.style.color="yellow";
+                i.style.fontWeight="800";
+              //  i.style.backgroundImage="url('https://cdn2.iconfinder.com/data/icons/royal-crowns/512/royal-alphabet-crown-letter-english-o-512.png')";
+              //  i.style.backgroundSize="contain";
+                //console.log("first box is clicked");
+                music.play();
+                if((a.innerHTML=="O") && (e.innerHTML=="O") && (i.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(45deg)";
+                    line.style.marginTop="26vh";
+                    main.style.marginTop="-22vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((g.innerHTML=="O") && (h.innerHTML=="O") && (i.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.marginTop="37vh";
+                    main.style.marginTop="-33vh";
+                    line.style.transform="rotate(0deg)";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+                else if((c.innerHTML=="O") && (f.innerHTML=="O") && (i.innerHTML=="O")){
+                    console.log("O won");
+                    x.innerHTML='O won';
+                    x.style.animation="anima 1s ease-in-out";
+                    music2.play();
+                    line.style.visibility="visible";
+                    line.style.transform="rotate(90deg)";
+                    line.style.marginLeft="49%";
+                    line.style.width="230px";
+                    line.style.marginTop="25vh";
+                    main.style.marginTop="-21vh";
+                    image.setAttribute("src","https://c.tenor.com/Po9tsBe237IAAAAj/milk-and-mocha-cute.gif");
+                }
+            }
+        }
+
+
+        //if(a.style.backgroundImage=="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')" && b.style.backgroundImage=="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')" && c.style.backgroundImage=="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')"){
+        //    alert("yeahh you wonn!!!!");
+        //}
+
+        //if(a.style.backgroundImage==b.style.backgroundImage==c.style.backgroundImage=="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')"){
+        //    alert("you wonn!!!!");
+        //}
+        //if(a.style.backgroundImage=="url('https://f1.pngfuel.com/png/104/664/857/check-mark-logo-cross-symbol-christian-cross-button-black-line-symmetry-png-clip-art.png')"){
+        //    x.innerHTML="you wonnn!!";
+        //}
+        //if((a.innerHTML=="X") && (b.innerHTML=="X") && (c.innerHTML=="X")){
+        //    console.log("X won");
+         //   x.innerHTML='X won';
+        //}
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
